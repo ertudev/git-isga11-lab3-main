@@ -1,0 +1,77 @@
+* { /*VIKTIGA DELAR ATT KUNNA*/
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body{ /*VIKTIGA DELAR ATT KUNNA*/
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+header{
+    border: 1px solid black; /*temp*/
+    padding: 20px;
+    width: 100%;
+}
+
+/*Block B*/
+main{
+    border: 1px solid black; /*temp*/
+    padding: 20px;
+    width: 70%;
+    height: auto;
+}
+
+aside{
+    border: 1px solid black; /*temp*/
+    padding: 20px;
+    width: 30%;
+    height: auto;
+}
+
+footer{
+    border: 1px solid black; /*Temp*/
+    padding: 20px;
+    width: 100%;
+    position: absolute; /*Behåll denna position som absolut*/
+    bottom: 0; /*Lägg längst ner på sidan*/
+}
+
+/*UPPGIFT 4*/
+
+table{
+    width: 40%;
+    border-collapse: collapse;
+}
+
+caption{
+    font-size: 30px;
+    text-align: center;
+    
+}
+
+tbody{
+    border-top: 5px double black;
+    border-bottom: 1px solid black;
+}
+
+tbody tr:nth-child(2n){
+    background-color: lightblue;
+}
+
+tfoot tr td:first-child{
+    font-weight: bold;
+    text-align: right;
+}
+
+tfoot tr td:last-child{
+    text-align: left;
+}
+
+tbody tr td, thead tr th{
+    text-align:left;
+}
+
+
+ 

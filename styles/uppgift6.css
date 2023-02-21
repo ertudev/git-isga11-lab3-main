@@ -1,0 +1,38 @@
+* {
+    box-sizing: border-box;
+}
+
+body{
+    background-color: wheat;
+}
+
+main{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+h1{
+    color:black;
+    background-color: white;
+}
+
+article{
+    width: 80%;
+    text-align: center;
+}
+
+article > div:nth-child(odd){
+    color:blue;
+    background-color: red;
+}
+
+article > div:nth-child(even){
+    color:red;
+    background-color: blue;
+}
+
+article>div:last-child{
+     color:white;
+     background-color: black;
+}

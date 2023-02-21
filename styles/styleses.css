@@ -1,0 +1,80 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+img{
+    height: auto;
+    width: 100%;
+}
+
+header{
+    background-color: dodgerblue;
+    text-align: center;
+    margin: 10px 5px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header h1{
+    padding-top: 20px;
+}
+
+header p{
+    padding: 80px;
+}
+
+main{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+article{
+    border: 1px solid;
+    width: 350px; /*ramen runt om bilderna*/
+    height: auto;
+    margin: 0px 10px;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+article>h3{
+    padding-bottom: 20px;
+    text-align: left;
+}
+
+
+/*RWD*/
+
+/*Mobile view*/
+
+@media screen and (max-width:360px){
+    header{
+        display: none;
+    }
+    body>h1{
+        padding: 10px;
+    }
+    article{
+        border-radius: 0;
+    }
+    main{
+           flex-wrap: wrap;
+    }
+}
+
+@media screen and (min-width:361px) and (max-width:800px){
+    body>h1{
+        display: none;
+    }
+    main{
+        flex-wrap: wrap;
+    }
+}
+
+@media screen and (min-width:801px){
+    body>h1{
+        display: none;
+    }
+}

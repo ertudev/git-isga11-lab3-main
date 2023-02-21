@@ -1,0 +1,59 @@
+* {
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+ 
+}
+
+header,main,aside,footer{
+    border:1px solid black;
+    padding: 2rem 0;
+}
+
+/*Block A*/
+header {
+    width: 100%;
+    margin-bottom: 10px;
+}
+/*Block B*/
+main{
+    width: 76%;
+    height: auto;
+}
+
+/*Block C*/
+aside{
+    width: 23%;
+    height: auto;
+    margin-left: 1%;
+}
+/*Block D*/
+footer{
+    width: 100%;
+    margin-top: 10px;
+}
+
+/*Uppgift 5c*/
+/* MOBIL */
+@media screen and (max-width: 375px){
+    aside{
+        display: none;
+    }
+    main{
+        width: 100%;
+    }
+}
+/* PLATTA */
+@media screen and (min-width: 376px) and (max-width: 1024px){
+    body:not(header,footer){
+        flex-direction: row-reverse;
+    }
+    aside{
+        margin-left: 0;
+        margin-right: 1%;
+    }    
+}

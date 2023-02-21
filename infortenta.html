@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="sv">
+
+<head>
+    <meta charset="utf-8">
+    <link href="./styles/styles.css" rel="stylesheet">
+    <title>Inför Tenta - Uppgift 3</title>
+</head>
+
+<body>
+    <header>
+        <p>Header</p>
+    </header>
+    <main>
+        <!--Inför tentan - uppgift 4-->
+        <table>
+            <caption>Fiskar i pölen</caption>
+            <thead>
+                <tr>
+                    <th scope="col">Fisk-art</th>
+                    <th scope="col">Antal</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Gädda</td>
+                    <td>14</td>
+                </tr>
+                <tr>
+                    <td>Mört</td>
+                    <td>5</td>
+                </tr>
+                <tr>
+                    <td>Blåval</td>
+                    <td>14</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td>Toalt antal:</td>
+                    <td>33</td>
+                </tr>
+            </tfoot>
+        </table>
+        <br>
+        <!--INFÖR TENTAN UPPGIFT 6 s.172-->
+        <!--Använder controls för att kunna kontrollera musiken, loop används för att fortsätta loopa musiken om och om igen-->
+        <!--Lägger till preload="auto" för att få webbläsaren att läsa in ljudfilen när hemsidan laddas-->
+        <audio controls loop preload="auto"> <!---->
+            <source src="./src/music.mp3" type="audio/mp3">
+            <source src="./src/music.acc" type="audio/acc">
+            <source src="./src/music.ogg" type="audio/ogg">
+            <p>Din webbläsare saknar stöd för ljudklippet. Du kan ladda
+                ner det <a href="./src/music.mp3">här.</a></p>
+        </audio>
+    </main>
+    <aside>
+        <!--INFÖR TENTAN UPPGIFT 5-->
+        <form>
+            <fieldset>
+                <legend>Uppgifter</legend> <!--Sätt en text uppepå fieldset-->
+                <div>
+                    <!--Ha en textruta för namn-->
+                    <label for="username">Namn:</label><br>
+                    <input type="text" id="username">
+                </div>
+                <br>
+                <!--Radio-knappar-->
+                <div>
+                    <label>Välj identitet:</label><br>
+                    <div>
+                        <input type="radio" value="1" name="gender" id="female"><!--Samma name värde gör endast en väljbar knapp-->
+                        <label for="female">Kvinna</label>
+                    </div>
+                    <div>
+                        <input type="radio" value="2" name="gender" id="other">
+                        <label for="other">Annat</label>
+                    </div>
+                    <div>
+                        <input type="radio" value="3" name="gender" id="male">
+                        <label for="male">Man</label>
+                    </div>
+                </div>
+                <br>
+                <!--Drop-down meny-->
+                <div>
+                    <label for="matter">Ärende:</label>
+                    <select id="matter" >
+                        <option value="" selected>Välj ärende</option> <!--Gör så att förstavalet är valt genom selected, kan stängas av med disabled (Går ej att klicka på)-->
+                        <option>Något</option>
+                        <option>Något annat</option>
+                        <option>Nej</option>
+                    </select>
+                </div>
+                <br>
+                <div>
+                    <input type="checkbox" id="agreement">
+                    <label for="agreement">Godkänn våra villkor:</label>
+                </div>
+                <br>
+                <!--Lägg till en knapp som är tryckbar via "submit"-->
+                <div>
+                    <button type="submit">Registrera</button>
+                </div>
+            </fieldset>
+        </form>
+    </aside>
+    <footer>
+        <p>Footer</p>
+    </footer>
+</body>
+
+</html>

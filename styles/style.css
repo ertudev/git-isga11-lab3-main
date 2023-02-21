@@ -1,0 +1,272 @@
+/*Sätt box-sizing till border-box för alla element*/
+* {
+    box-sizing: border-box;
+}
+
+/*Enhet 1*/
+
+html {
+    font-size: 16px;
+    /*Tillsätter all textstorlek inom HTML till 16px*/
+}
+
+body {
+    display: flex;
+    /*Gör elementet justerbart*/
+    flex-wrap: wrap;
+    /*Slår in innehåll*/
+    flex-direction: row;
+    /*Justerar riktningen på elementen till rader*/
+    justify-content: center;
+    /*Centererar innehåll*/
+    /*Centrera innehållet på skärmen*/
+    font-family: 'Roboto', sans-serif;
+    /*text språk, enligt instruktion*/
+    font-size: 1rem;
+    /*Text storlek, enligt instruktion*/
+}
+
+/*Klass för div, positionerad längst upp på hemsidan.*/
+.jumbotron {
+    background-color: #DEDEDE;
+    padding: 1.5rem;
+    /*Inre marginal*/
+    margin: 0rem 0rem 1rem 0rem;
+    /*Yttre marginal, enbart nedåt*/
+    border-radius: 0.3rem;
+    /*Ovala kanter, enligt instruktion*/
+}
+
+.text-center {
+    text-align: center;
+    /*Centrerar texten i jumbotron*/
+}
+
+/*Form värden*/
+form {
+    border: 0.1rem solid silver;
+    /*Skapar en silver färgad kantlinje, med 0.1 rem*/
+    border-radius: 0.5rem;
+    /*Tillsätter ovala kanter, med 0.5 rem*/
+    padding: 1rem;
+    /*Skapar 1 rem mellanrum, mellan elementen*/
+    margin-bottom: 20px;
+    /*Skapar mellanrum under formen med 20 px*/
+    box-shadow: 0px 0px 10px #52525250;
+    /*Skapar en skugga*/
+}
+
+/*Textrutor i form*/
+input[type="text"],
+input[type="color"] {
+    display: block;
+    /*Definerar elementet som block-level*/
+    width: 100%;
+    border: 0.15rem solid rgba(192, 192, 192, 0.5);
+    border-radius: 0.25rem;
+    /*Rundade hörn*/
+    font-size: 0.8rem;
+    /*Sätt font-size till 0.8 rem = 12.8px */
+    padding: 0.5rem 0.5rem;
+    /*Ändra inre marginal*/
+    margin-bottom: 0.5rem;
+    margin-top: 0.25rem;
+    /*Ändra margin bottom och top*/
+    background-color: white;
+    /*Sätt vit bakgrundsfärg*/
+    height: 2.5rem;
+    /*Ändra höjd på färgrutorna innanför form så att de blir synliga*/
+}
+
+/*Textrutorna omges med blå skugga när användaren sätter textmarkören*/
+input[type="text"]:focus {
+    box-shadow: 0 0 0.5rem dodgerblue;
+    outline: none;
+}
+
+#newGame {
+    /*Klass för knappen "Starta spelet!" */
+    border: none;
+    background-color: dodgerblue;
+    /*Bakgrundsfärg på knappen*/
+    color: white;
+    font-size: 1rem;
+    /*Ändrar storleken på texten */
+    text-decoration: none;
+    font-weight: bold;
+    /* Fetstil */
+    padding: 0.5rem 1rem;
+    border-radius: 0.1875rem;
+}
+
+table {
+    border-spacing: 0px;
+}
+
+/*Ändrar rubrikerna i formen*/
+.col {
+    text-align: left;
+    /*Text vänster sida*/
+    font-size: 16px;
+    /*Ändra storlek på text*/
+    font-weight: bold;
+    /*Fetstilt*/
+    color: black;
+    /*Färg: Svart*/
+}
+
+
+
+.gameArea {
+    /* Tic Tac Toe spel arean */
+    border: 1px solid black;
+    border-collapse: collapse;
+    max-width: 375px;
+    max-height: 375px;
+    position: relative;
+    /*Spel areans position på hemsidan */
+    margin: auto;
+    /*Spel areans margin */
+}
+
+td[data-id] {
+    /*Rutorna i spelareans regler*/
+    width: 125px;
+    /*Rutornas bredd*/
+    height: 125px;
+    /*Rutornas höjd*/
+    font-size: 50px;
+    border: 1px solid darkgray;
+    text-align: center;
+    /*Centrerar texten*/
+}
+
+tr {
+    height: 100px;
+    /*Ändra höjd till 100px*/
+}
+
+
+@media screen and (max-width: 414px) {
+
+    /*Aside elementet göms*/
+    aside {
+        display: none;
+    }
+
+    /*Sätt knapp till höger och med 1rem margin-top*/
+    #div-with-a {
+        display: flex;
+        /*Flexa*/
+        justify-content: flex-end;
+        margin-top: 1rem;
+    }
+}
+
+/*Enhet 2 - för skärmar med min-width 415px och max-width 1180px */
+@media screen and (min-width: 415px) and (max-width: 1180px) {
+
+    /*Aside width till 30%*/
+    aside {
+        width: 30%;
+    }
+
+    /*Sätt img i aside till 100%, höjd auto*/
+    aside img {
+        width: 100%;
+        height: auto;
+    }
+
+    /*Main bredd 50%*/
+    main {
+        width: 50%;
+    }
+
+    /*Table detaljer (rutor)*/
+    td {
+        width: 125px;
+        height: 125px;
+    }
+
+    /*font-size för alla barn till HTML 18px*/
+    html {
+        font-size: 18px;
+    }
+
+    /*Fortsätt hålla knappen på höger sida, samma som enhet 1*/
+    #div-with-a {
+        display: flex;
+        justify-content: flex-end;
+        margin-top: 1rem;
+    }
+}
+
+/*Enhet 3 - för skärmar bredare än 1181px*/
+@media screen and (min-width: 1181px) {
+
+    /*Sätt aside till 300px*/
+    aside {
+        width: 300px;
+    }
+
+    /*Img i aside till 100% bredd, fast höjd för att matcha*/
+    aside img {
+        width: 100%;
+        height: 540px;
+    }
+
+    /*Main bredd 70%*/
+    main {
+        width: 70%;
+    }
+
+    /*Table detaljer (rutor)*/
+    td {
+        width: 200px;
+        height: 200px;
+    }
+
+    /*Font-size för barn till HTML 22px*/
+    html {
+        font-size: 22px;
+    }
+
+    /*Ändra bredd på textinput boxar till 49%*/
+    .col {
+        width: 49%;
+    }
+
+    /*input innanför col ska alltid ha bredd 100%*/
+    .col input {
+        width: 100%;
+
+    }
+
+    /*Lägg till hover och active effekt för knapp*/
+    #newGame:hover {
+        background-color: rgb(0, 195, 255);
+        box-shadow: 0 0 20px #6fc5ff50;
+        transition: 0.3s ease-in-out;
+    }
+
+    /*När knappen blir tryckt, gör en transition/transform och byt färg*/
+    #newGame:active {
+        background-color: blue;
+        transition: all 0.1s;
+        transform: scale(0.95);
+        box-shadow: none;
+    }
+
+    /*Ändra på element innanför form, skapa jämnt utrymme mellan element*/
+    #div-in-form {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    /*Flytta på knappen*/
+    #div-with-a {
+        margin-top: 1rem;
+        margin-bottom: 0.5rem;
+    }
+}
